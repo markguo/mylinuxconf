@@ -1,0 +1,53 @@
+# .256......
+term linux
+#attrcolor b ".I"
+#termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+
+# ....
+encoding GBK UTF-8
+#encoding GBK
+
+# ..visual bell
+vbell off
+
+# .......detach
+autodetach on
+
+# .........greeting
+startup_message off
+
+# make the shell in every window a login shell
+# .......~/.bash_profile
+shell -$SHELL
+
+# .copy/paste........5000....
+defscrollback 5000
+
+#remove some stupid / dangerous key bindings
+bind k
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+#make them better
+bind 'K' kill
+bind 'I' login on
+bind 'O' login off
+bind '}' history
+
+# default windows
+
+# screen -t work 0
+# screen -t shell 1
+# select 0
+
+# hardstatus line hack
+#backtick 1 5 5 /home/xqiu/bin/my_sysload1
+#backtick 2 5 5 /home/xqiu/bin/my_free
+
+hardstatus on
+hardstatus alwayslastline '%{Yk}%-w%{.Yk}%n %t%{-}%+w %=%{.w} %{.Yr}%1` %{.  Yb}%2`%D %Y-%m-%d %{kY}%C'
+
