@@ -42,7 +42,7 @@ function find_nosvn()
 
 }
 
-MY_CONFIG_ROOT=~/_myconfig
+MY_CONFIG_ROOT=~/mylinuxconf
 
 source $MY_CONFIG_ROOT/bash_completion_tmux.sh
 
@@ -54,4 +54,4 @@ alias diff='diff --exclude=".svn" --exclude=".depend" --exclude="*.o" --exclude=
 
 export EDITOR=vim
 export PS1='[\u@\h \W]\$ '
-source ~/.git-completion.bash
+source $MY_CONFIG_ROOT/git-completion.bash
