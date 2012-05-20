@@ -66,6 +66,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "FixedsysTTF:11" :foundry "unknown" :slant normal :weight semi-bold :height 113 :width normal)))))
- (defun my-make-CR-do-indent ()
-            (define-key c-mode-base-map "\C-m" 'c-context-line-break))
-          (add-hook 'c-initialization-hook 'my-make-CR-do-indent)
+(defun my-make-CR-do-indent ()
+   (define-key c-mode-base-map "\C-m" 'c-context-line-break))
+(add-hook 'c-initialization-hook 'my-make-CR-do-indent)
+(setq c-basic-offset 4)
