@@ -52,7 +52,7 @@ function find_nosvn()
 
 }
 
-MY_CONFIG_ROOT=~/development/mylinuxconf
+MY_CONFIG_ROOT=~/mylinuxconf
 
 source $MY_CONFIG_ROOT/bash_completion_tmux.sh
 source $MY_CONFIG_ROOT/git-completion.bash
@@ -60,3 +60,4 @@ source $MY_CONFIG_ROOT/git-completion.bash
 export EDITOR=vim
 export PS1='[\u@\h \W]\$ '
 source $MY_CONFIG_ROOT/git-completion.bash
+unset SSH_ASKPASS
