@@ -45,6 +45,7 @@ function find_nosvn()
 MY_CONFIG_ROOT=~/development/mylinuxconf
 
 source $MY_CONFIG_ROOT/bash_completion_tmux.sh
+source $MY_CONFIG_ROOT/git-completion.bash
 
 alias grep='grep --color --exclude="*.svn-*"'
 alias fgrep='fgrep --color --exclude="*.svn-*"'
