@@ -42,7 +42,7 @@ function find_nosvn()
 
 }
 
-MY_CONFIG_ROOT=~/mylinuxconf
+MY_CONFIG_ROOT=~/development/mylinuxconf
 
 source $MY_CONFIG_ROOT/bash_completion_tmux.sh
 
