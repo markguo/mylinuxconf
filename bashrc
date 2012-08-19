@@ -52,6 +52,7 @@ alias fgrep='fgrep --color --exclude="*.svn-*"'
 alias egrep='egrep --color --exclude="*.svn-*"'
 alias find=find_nosvn
 alias diff='diff --exclude=".svn" --exclude=".depend" --exclude="*.o" --exclude="*.a" --exclude="*.so" --exclude="*.la" --exclude="*.lo"'
+alias et='emacsclient -t'
 
 export EDITOR=vim
 export PS1='[\u@\h \W]\$ '
