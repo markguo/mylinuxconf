@@ -23,7 +23,9 @@ GOOS=linux
 GOARCH=amd64
 GIT_EDITOR=vim
 LANG='zh_CN.UTF8' 
+LOCAL_BIN_DIR=~/ENV/bin
 export GOROOT GOOS GOARCH GIT_EDITOR LANG
+export PATH=$LOCAL_BIN_DIR:$PATH
 
 # subversion specific aliases and functions
 
