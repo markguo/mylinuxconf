@@ -5,38 +5,7 @@ if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
-# User specific aliases and functions
-alias lgdb='libtool --mode=execute gdb'
-alias lvalg='libtool --mode=execute valgrind'
-alias dmake='DEBUG=1 make'
-alias mst='screen -X title `pwd`'
-alias svnchange="svn status | grep -v '^?'"
-alias svnnew="svn stat|grep ?|egrep '\.(hpp|cpp|h|c)\>'"
-alias svncanmerge='svn mergeinfo --show-revs eligible'
-alias grep='grep --color --exclude="*.svn-*"'
-alias fgrep='fgrep --color --exclude="*.svn-*"'
-alias egrep='egrep --color --exclude="*.svn-*"'
-alias find=find_nosvn
-alias diff='diff --exclude=".svn" --exclude=".depend" --exclude="*.o" --exclude="*.a" --exclude="*.so" --exclude="*.la" --exclude="*.lo"'
-alias et='emacsclient -t'
-alias ls='ls --color'
-alias ll='ls -l'
-
-# export WIRE_CONF=/home/guoshiwei/DATA/wiredata
-# export SSPLATFORM_ROOT=~/ssplatform/
-export SVN_EDITOR=vim
-
-GOROOT=$HOME/go
-GOOS=linux
-GOARCH=amd64
-GIT_EDITOR=vim
-LANG='zh_CN.UTF8' 
-LOCAL_BIN_DIR=~/ENV/bin
-export GOROOT GOOS GOARCH GIT_EDITOR LANG
-export PATH=$LOCAL_BIN_DIR:$PATH
-
 # subversion specific aliases and functions
-
 function find_nosvn()
 {
     initargs=()
@@ -52,12 +21,33 @@ function find_nosvn()
 
 }
 
-MY_CONFIG_ROOT=~/mylinuxconf
+# User specific aliases and functions
+alias diff='diff --exclude=".svn" --exclude=".depend" --exclude="*.o" --exclude="*.a" --exclude="*.so" --exclude="*.la" --exclude="*.lo"'
+alias dmake='DEBUG=1 make'
+alias ds='du --max-depth=1|sort -n'
+alias egrep='egrep --color --exclude="*.svn-*"'
+alias et='emacsclient -t'
+alias fgrep='fgrep --color --exclude="*.svn-*"'
+alias find=find_nosvn
+alias grep='grep --color --exclude="*.svn-*"'
+alias lgdb='libtool --mode=execute gdb'
+alias ll='ls -l'
+alias ls='ls --color'
+alias lvalg='libtool --mode=execute valgrind'
+alias mst='screen -X title `pwd`'
+alias svncanmerge='svn mergeinfo --show-revs eligible'
+alias svnchange="svn status | grep -v '^?'"
+alias svnnew="svn stat|grep ?|egrep '\.(hpp|cpp|h|c)\>'"
 
+MY_CONFIG_ROOT=~/mylinuxconf
+GIT_EDITOR=vim
+LANG='zh_CN.GB18030' 
+export EDITOR=vim
+export GIT_EDITOR LANG
+export PATH="~/ENV/bin:$PATH"
+export PS1='\[\e[0;32m\][\u\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \[\e[1;32m\]\$]\[\e[m\] \[\e[1;37m\]'
+export SVN_EDITOR=vim
+unset SSH_ASKPASS
 source $MY_CONFIG_ROOT/bash_completion_tmux.sh
 source $MY_CONFIG_ROOT/git-completion.bash
 
-export EDITOR=vim
-export PS1='[\u@\h \W]\$ '
-source $MY_CONFIG_ROOT/git-completion.bash
-unset SSH_ASKPASS
